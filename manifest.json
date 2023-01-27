@@ -1,21 +1,28 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Babbel - Hide Translations",
-  "version": "1.0.0",
+  "version": "2.0.0",
 
   "browser_specific_settings": {
     "gecko": {
       "id": "{7346791f-3c3d-4818-a5f5-4adec0e8a1d7}",
-      "strict_min_version": "108.0"
+      "strict_min_version": "109.0"
     }
   },
 
   "description": "Hides translation text in Babbel",
   "icons": {
-    "48": "icon.svg"
+    "48": "icon.png"
   },
 
-  "permissions": ["https://my.babbel.com/*/lesson-player/*", "storage"],
+  "permissions": ["storage"],
+  "host_permissions": ["https://my.babbel.com/*/lesson-player/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["icon-hide.svg", "icon-show.svg"],
+      "matches": ["https://my.babbel.com/*"]
+    }
+  ],
 
   "content_scripts": [
     {

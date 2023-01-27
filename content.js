@@ -16,6 +16,8 @@
 
 // Content Script
 
+const browser = globalThis.browser || globalThis.chrome
+
 /**
  * Adds the extension's CSS to the DOM.
  */
